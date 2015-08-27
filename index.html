@@ -1,0 +1,113 @@
+<!--Scott Zhen Hua Liao 210691249 -->
+<!DOCTYPE html>
+<html>
+<head>
+	 <!-- this is the title of the page -->
+     <title>Fake Pizza Restaurent</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<!-- custom theme -->
+<link rel="stylesheet" href="themes/Pizza.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<!-- standard jquery package -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<!-- this holds the body content of the page-->
+<body>
+	<!-- define page and theme and give ID for landing page -->
+    <div data-role="page" id="index" data-theme="d">
+          <!-- header for the page -->
+		  <div data-role="header">
+               <h1>Home</h1>
+          </div>
+		    <!-- holds the content of the page -->
+			<div data-role="main" class="ui-content">
+				<!-- aligns header to center of the page -->
+				<h1 align="center">Fake Pizza</h1>
+				<!-- image is in a div to align to center -->
+				<div align="center">
+				<!-- sources an img from src at the width of 80% of screen size -->
+				<img style="width:80%;" src="pics/pizzeria.jpg">
+				</div>
+					<!-- creates a navigation bar -->
+					<div data-role="navbar">
+						<!-- create an unlisted field -->
+						<ul>
+							<!-- navigation is here as listed elements -->
+							<li><a href="Menu.html" data-icon="grid" data-ajax="false">Menu</a></li>
+							<li><a href="Recipe.html" data-icon="grid" data-ajax="false">Recipe</a></li>
+							<!-- Calls tel:### -->
+							<li><a href="tel:" data-icon="phone">Call us</a></li>
+						</ul>
+					</div>
+					<div data-role="navbar">
+						<ul>
+							<!-- scripts for gmap -->
+							<!-- this gmap is a dynamic gmap can move the map/streetview etc-->
+							<!-- fails to load gmap if I place the script elsewhere not sure why-->
+							<!-- currently set to melbourne area as shop does not have a real address-->
+							<!-- improvements here would be to have geo-location coded in to give you directions to store-->
+							<li>
+								<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+								<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+								<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
+								<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css"/>
+								<script type="text/javascript">
+								$(function () {
+									$("#fplocation").click(function () {
+										$("#dialog").dialog({
+											modal: true,
+											title: "Fake Pizza",
+											width: 600,
+											hright: 450,
+											buttons: {
+												Back: function () {
+												$(this).dialog('close');
+												}
+											},
+											open: function () {
+											var mapOptions = {
+												center: new google.maps.LatLng(-37.810000, 144.950000),
+												zoom: 12,
+												mapTypeId: google.maps.MapTypeId.ROADMAP
+											}
+											var map = new google.maps.Map($("#dvMap")[0], mapOptions);
+											}				
+										});
+									});
+								});
+								</script>
+								<!-- this calls for the pop up function-->
+								<a id="fplocation" data-rel="popup"data-icon="location" class"ui-btn" data-ajax="false">Location</a>
+								<div id="dialog" style="display: none">
+									<!-- this displays gmap within the pop up at dimensions H x W -->
+									<div id="dvMap" style="height: 380px; width: 580px;">
+									</div>
+								</div>
+							</li>
+							<!-- directs you to feedback form -->
+							<li><a href="Feedback.html" data-icon="edit" data-ajax="false">Feedback</a></li>
+							<!-- calls another pop up "fpabout" defined below-->
+							<li><a href="#fpabout" data-rel="popup" data-icon="user" class="ui-btn">About</a></li>
+						</ul>
+					</div>
+					
+			</div>
+			<!-- define "fpabout"-->					
+			<div data-role="popup" id="fpabout" class="ui-content">
+				<!-- defines pop up with a "back" button extensive use of button attributes -->
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
+				<!-- some info about me-->
+				<p><b>Scott Liao 210691249</b></p>
+				<p>Off-Campus Student at Deakin</p>
+				<p>Learning about mobile app development for work</p>
+				<p>This pizza shop is not real!</p>
+			</div>
+			<!-- footer of the page-->				
+			<div data-role="footer">
+			<h2>&copy; Scott Liao 2015</h2>
+			</div>
+         
+	</div>
+</body>
+</html>

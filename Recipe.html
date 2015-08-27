@@ -1,0 +1,240 @@
+<!--Scott Zhen Hua Liao 210691249 -->
+<!DOCTYPE html>
+<html>
+<head>
+	 <!-- this is the title of the page -->	
+     <title>Recipe</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<!-- custom theme -->
+<link rel="stylesheet" href="themes/Pizza.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<!-- standard jquery package -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- back button using simple script -->
+<script>
+function goBack() {
+window.history.back();
+}
+</script>
+
+</head>
+<!-- this holds the body content of the page-->
+<body>
+	 <!-- define page and theme and give ID for landing page -->
+     <div data-role="page" id="Recipe" data-theme="d">
+	      <!-- header for the page -->
+          <div data-role="header">
+               <h1>Recipe</h1>
+				<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script and a home button in the header -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+		  <!-- holds the content of the page -->		  
+          <div data-role="main" class="ui-content">
+               <!-- header -->
+			   <h1>Recipes</h1>
+               <!-- creates collapsibles with text inside -->			   
+			   <div data-role ="collapsible" data-iconpos="right">
+			   <h1>Entree</h1>
+			   <!-- transitions to other hidden pages-->
+			   <!-- background of the buttons sourced from local images -->
+			   <p><a href="#chipr" data-role="button" data-transition="slideup" style="background-image:url(pics/chips.png)"><font size="20">Chips</font></a></p>
+			   <p><a href="#soupr" data-role="button" data-transition="slideup" style="background-image:url(pics/soup.jpg)"><font size="20">Soup</font></a></p>
+			   </div>
+			   
+			   <div data-role ="collapsible" data-iconpos="right">
+			   <h1>Main</h1>
+			   <p><a href="#pizzar" data-role="button" data-transition="slideup" style="background-image:url(pics/pizza.png)"><font size="20">Pizza</font></a></p>
+			   <p><a href="#pastar" data-role="button" data-transition="slideup" style="background-image:url(pics/pasta.jpg)"><font size="20">Pasta</font></a></p>
+			   </div>
+			   
+			   <div data-role ="collapsible" data-iconpos="right">
+			   <h1>Dessert</h1>
+			   <p><a href="#icecr" data-role="button" data-transition="slideup" style="background-image:url(pics/icecream.jpg)"><font size="20">Ice-Cream</font></a></p>
+			   <p><a href="#tiramisur" data-role="button" data-transition="slideup" style="background-image:url(pics/tiramisu.jpg)"><font size="20">Tiramisu</font></a></p>
+			   </div>
+			   
+				<!-- Call for back button script at bottom of the page -->	
+			   <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+         </div>
+		 <!-- footer -->
+          <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>
+         
+     </div>
+	<!-- pages seperating different recipes -->
+	<!-- Chips recipe -->
+     <div data-role="page" id="chipr" data-theme="d">
+          <div data-role="header">
+               <h1>Recipe</h1>	
+				<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+          <div data-role="main" class="ui-content">
+               <img style="width:50%;" src="pics/chips.png" is="image">
+			   <h1>Chips</h1>
+			   <p>Ingredients:</p>
+			   <p>1kg of Russet Potatos</p>
+			   <p>Directions:</p>
+			   <p>1.Slice potatoes into French fries, and place into cold water so they won't turn brown while you prepare the oil.</p>
+			   <p>2.Heat oil in a large skillet over medium-high heat.</p>
+			   <p>3.Place in the hot oil so they are not touching at first. The fries must be placed into the skillet one at a time, or they will clump together. Fry until golden brown and crispy. Remove and drain on paper towels.</p></p>		  
+		  </div>
+		  <!-- Call for back button script at bottom of the page -->	
+		  <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+          <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>
+         
+     </div>
+	 
+	 	<!-- Soup -->
+     <div data-role="page" id="soupr" data-theme="d">
+          <div data-role="header">
+               <h1>Recipe</h1>	
+				<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+          <div data-role="main" class="ui-content">
+               <img style="width:50%;" src="pics/soup.jpg" is="image">
+			   <h1>Soup</h1>
+			   <p>Ingredients:</p>
+			   <p>2tbsp olive oil,1 onion chopped,2 large red peppers choped,2 cloves of garlic chopped,600g tomatoes chopped, 1tin canned tomotoes, 1L chicken stock, 1tbsp Fresh basil</p>
+			   <p>Instruction:</p>
+			   <p>1.Heat the olive oil in a large saucepan. Saute the onion, peppers, and garlic for about 5 minutes. Add the fresh tomatoes and cook for another 3-4 minutes.</p>
+			   <p>2.Add the tinned tomatoes, the stock and 1 (250ml) cup of water. Bring to the boil, reduce the heat and simmer for 30 minutes.</p>
+			   <p>3.Remove from the heat and allow to cool a little. Puree the soup in batches in a food processor or with a hand-held blender. Strain through a coarse sieve.</p>
+		  </div>
+		  <!-- Call for back button script at bottom of the page -->	
+		  <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+          <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>
+         
+     </div>
+	 
+	 	<!-- Pizza -->
+     <div data-role="page" id="pizzar" data-theme="d">
+          <div data-role="header">
+               <h1>Recipe</h1>	
+				<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+          <div data-role="main" class="ui-content">
+               <img style="width:50%;" src="pics/pizza.png" is="image">
+			   <h1>Pizza</h1>
+			   <p>Ingredients:</p>
+			   <p>Pizza Base, Pizza Toppings, Pizza sauce</p>
+			   <p>Instructions:</p>
+			   <p>1.Spread pizza sauce on to pizza base.</p>
+			   <p>2.Cover with desired toppings.</p>
+			   <p>3.Bake at 180 degrees for 10-15 minutes or until cheese melts.</p>
+          </div>
+		  <!-- Call for back button script at bottom of the page -->	
+		  <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+          <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>
+         
+     </div>
+	 
+	 	<!-- Pasta recipe -->
+     <div data-role="page" id="pastar" data-theme="d">
+          <div data-role="header">
+               <h1>Recipe</h1>	
+				<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+          <div data-role="main" class="ui-content">
+               <img style="width:50%;" src="pics/pasta.jpg" is="image">
+			   <h1>Pasta</h1>
+			   <p>Ingredients:</p>
+			   <p>Pasta, Sauce, Filling</p>
+			   <p>Intructions:</p>
+			   <p>1.Only partially cook dry pasta. In a pot of abundantly salted boiling water, cook dry pasta for only half or three-quarters of the recommended time.</p>
+			   <p>2.Add the semi-cooked pasta to a pan sauce. Using a slotted spoon (for shaped pasta) or tongs (for spaghetti), remove the partially cooked pasta from the water, reserving the water for later use. Add the pasta to the pan of sauce.</p>
+			   <p>3.Adjust the thickness of the sauce by adding the reserved water. Finish cooking the pasta in the cuisson.</p>
+
+		  </div>
+		  <!-- Call for back button script at bottom of the page -->	
+		  <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+          <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>
+         
+     </div>
+	 
+	 	<!-- Ice-Cream recipe -->
+     <div data-role="page" id="icecr" data-theme="d">
+          <div data-role="header">
+               <h1>Recipe</h1>	
+				<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+          <div data-role="main" class="ui-content">
+               <img style="width:50%;" src="pics/icecream.jpg" is="image">
+			   <h1>Ice-Cream</h1>
+			   <p>Ingredients:</p>
+			   <p>2 cups cold heavy/whipping cream, 1 can sweetened condensed milk, Your choice of mix-ins</p>
+			   <p>Instructions:</p>
+			   <p>1.Whip cream with mixer or whisk until stiff peaks form. Make sure you use cream straight from the fridge as it will whip faster</p>
+		       <p>2.Pour sweetened condensed milk into large bowl and stir in your desired flavorings and mix-ins.</p>
+			   <p>3.Gently fold the whipped cream into the milk mixture until all combined.</p>
+		  </div>
+		  <!-- Call for back button script at bottom of the page -->	
+		  <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+          <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>
+         
+     </div>
+	 
+	 	<!-- Tiramisu recipe -->
+     <div data-role="page" id="tiramisur" data-theme="d">
+          <div data-role="header">
+               <h1>Recipe</h1>	
+				<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+          <div data-role="main" class="ui-content">
+               <img style="width:50%;" src="pics/tiramisu.jpg" is="image">
+			   <h1>Tiramisu</h1>
+			   <p>Ingredients:</p>
+			   <p>6 eggs, separated, 220 g (1 cup) caster sugar, 500 g mascarpone, 400 g packet pavesini biscuits</p>
+			   <p>Instructions:</p>
+			   <p>1.Beat the egg yolks and the sugar for at least 15 minutes, or until thick and white. Add the mascarpone and beat until just combined but smooth.</p>
+			   <p>2.Beat the eggwhites until thick and stiff, then gently fold into the mascarpone mixture.
+			   <p>3.Layer the biscuits and mascarpone cream in a large glass bowl or individual glass bowls. Refrigerate for at least 2-3 hours. Before serving, top with a generous grating of chocolate.</p>
+			   
+          </div>
+		  <!-- Call for back button script at bottom of the page -->	
+		  <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+          <!-- footer -->
+		  <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>  
+     </div>
+</body>
+</html>

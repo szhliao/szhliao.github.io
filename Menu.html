@@ -1,0 +1,75 @@
+<!--Scott Zhen Hua Liao 210691249 -->
+<!DOCTYPE html>
+<html>
+<head>
+	 <!-- this is the title of the page -->	
+     <title>Menu</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<!-- custom theme -->
+<link rel="stylesheet" href="themes/Pizza.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<!-- standard jquery package -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- back button using simple script -->
+<script>
+function goBack() {
+window.history.back();
+}
+</script>
+</head>
+<!-- this holds the body content of the page-->
+<body>
+	 <!-- define page and theme and give ID for landing page -->
+     <div data-role="page" id="Menu" data-theme="d">
+          <!-- header for the page -->
+          <div data-role="header">
+               <h1>Menu</h1>
+			   	<div class="ui-grid-a ui-btn-left" >
+					<!-- Call for back button script and a home button in the header -->
+					<div class="ui-block-a" ><a onclick="goBack()" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-carat-l ui-btn-icon-notext" data-inline="true" ></a></div>
+					<div class="ui-block-b" ><a href="index.html" class="ui-btn ui-nodisc-icon ui-alt-icon ui-corner-all ui-icon-home ui-btn-icon-notext" data-inline="true" data-ajax="false"></a></div>
+				</div>
+          </div>
+		  <!-- holds the content of the page -->		  
+          <div data-role="main" class="ui-content">
+               <!-- header -->
+			   <h1>Menu</h1>
+               <!-- creates collapsibles with text inside -->
+			   <!-- instead of text here we could use buttons that items to a temp form-->
+			   <!-- each item has a value of currency that can be paid for-->
+			   <!-- SSL encryption methods would be necessary if taking payments-->
+			   <!-- more columns would be required in the DB-->
+			   <div data-role ="collapsible" data-iconpos="right">
+			   <h1>Entree </h1>
+			   <!-- Span defines the text inside it -->
+			   <p><span style="color:#ed1c24">$10</span> Chips</p>
+			   <p><span style="color:#ed1c24">$10</span> Chicken Wings</p>
+			   </div>
+			   
+			   <div data-role ="collapsible" data-iconpos="right">
+			   <h1>Main</h1>
+			   <p><span style="color:#ed1c24">$20</span> Pizza</p>
+			   <p><span style="color:#ed1c24">$20</span> Pasta</p>
+			   </div>
+			   
+			   <div data-role ="collapsible" data-iconpos="right">
+			   <h1>Dessert</h1>
+			   <p><span style="color:#ed1c24">$5</span> Ice-Cream</p>
+			   <p><span style="color:#ed1c24">$5</span> Panna Cotta</p>
+			   </div>
+			   
+				<!-- Call for back button script at bottom of the page -->	
+			   <a class="ui-btn ui-nodisc-icon ui-alt-icon ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" onclick="goBack()"></a>
+					
+									
+					
+          </div>
+		  <!-- footer -->
+          <div data-role="footer">
+               <h2>&copy; Scott Liao 2015</h2>
+          </div>
+         
+     </div>
+</body>
+</html>
